@@ -34,9 +34,6 @@ urlRESTAPI = 'https://api.netpie.io/topic/' + str(APPID) + str(Topic) + '?auth='
  
 @app.route("/")
 #@app.route("/callback")
-app.post('/', function (req, res) {
-  res.send('POST request to the homepage');
-});
 
 def hello():
     return "Hello World!"
