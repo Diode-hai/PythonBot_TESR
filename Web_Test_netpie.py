@@ -40,7 +40,7 @@ def hello():
     
 #----------------------------------------------------
 #@app.route("/callback", methods= ['GET','POST','DELETE'])
-@app.route("/callback", methods= ['POST','DELETE'])
+@app.route("/callback", methods= ['POST'])
 def callback():
     signature = request.headers['X-Line-Signature']
 
