@@ -32,7 +32,8 @@ urlRESTAPI = 'https://api.netpie.io/topic/' + str(APPID) + str(Topic) + '?auth='
 #https://api.netpie.io/topic/LineBotRpi/LED_Control?auth=Jk0ej35pLC7TVr1:edWzwTUkzizhlyRamWWq6nF9I
 
  
-@app.route("/")
+#@app.route("/")
+@app.route("/callback", methods=['POST'])
 def hello():
     return "Hello World!"
  
