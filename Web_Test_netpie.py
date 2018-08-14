@@ -33,9 +33,15 @@ urlRESTAPI = 'https://api.netpie.io/topic/' + str(APPID) + str(Topic) + '?auth='
 
  
 #@app.route("/")
-@app.route("/callback")
-def hello():
+#@app.route("/callback")
+app.post('/callback', function (req, res) {
+  #res.send('POST request to the homepage');
+    def hello():
     return "Hello World!"
+});
+
+#def hello():
+    #return "Hello World!"
  
 if __name__ == "__main__":
     app.run()
