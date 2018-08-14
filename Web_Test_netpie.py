@@ -17,12 +17,14 @@ import urllib3
 
 app = Flask(__name__)
 
-line_bot_api = LineBotApi('yQh1VyVtqSvQck/1blc8QQ7sSxdIPNI9+CYB78XF9dUP0Ho2lGJ02rtnlaqe6aFlUeyVCszB6P6dy3GM5VgoY39OWbwmPCcljSOBcBbke6lc5ePxoaWp9pIRiC5M/hC2w/m25KnZ4MRvEOliFccGhAdB04t89/1O/w1cDnyilFU=')
-handler = WebhookHandler('2ba452b79e30fcf854be2b49785a7bd5')
+#Channel secret
+line_bot_api = LineBotApi('uPPbuNIIATryuuhKwEC4kRRHqdNd4+73PnMi+7DQ383G4NMkI6S7a+li5SCoqZJGbKsl3sxQ6J556VApXNkprhB4dKVg1rR6UcHZzSTFyte5h0qyqFAb9zISLsL5LEw+DS/KlnXV/IG5UDYV3g6qjQdB04t89/1O/w1cDnyilFU=')
+#token 
+handler = WebhookHandler('bce117e84ff9f7e593d428b1ffac7aa4')
 
-APPID="LineBotRpi"
-KEY = "bjuWQftBs1hMHSw"
-SECRET = "EUUdgsgDClUdqdzIDGnwjZ752"
+APPID="BotChatLine"
+KEY = "me37I8KsiCqpTWS"
+SECRET = "ozPtNGTK6GPA1STe1PjIvvrwS"
 Topic = "/LED_Control"
 
 url = 'https://api.netpie.io/topic/' + str(APPID) + str(Topic)
