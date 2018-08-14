@@ -1,12 +1,12 @@
-#from flask import Flask
-#app = Flask(__name__)
+from flask import Flask
+app = Flask(__name__)
  
-#@app.route("/")
-#def hello():
-#    return "Hello World!"
+@app.route("/")
+def hello():
+    return "Hello World!"
  
-#if __name__ == "__main__":
-#    app.run()
+if __name__ == "__main__":
+    app.run()
 
 #-------------------------------------------------
 from flask import Flask, request, abort
@@ -27,9 +27,6 @@ import urllib3
 
 
 app = Flask(__name__)
-@app.route("/")
-def hello():
-    return "Hello World!"
 
 #Token
 line_bot_api = LineBotApi('uPPbuNIIATryuuhKwEC4kRRHqdNd4+73PnMi+7DQ383G4NMkI6S7a+li5SCoqZJGbKsl3sxQ6J556VApXNkprhB4dKVg1rR6UcHZzSTFyte5h0qyqFAb9zISLsL5LEw+DS/KlnXV/IG5UDYV3g6qjQdB04t89/1O/w1cDnyilFU=')
