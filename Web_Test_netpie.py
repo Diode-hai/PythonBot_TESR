@@ -35,8 +35,8 @@ urlRESTAPI = 'https://api.netpie.io/topic/' + str(APPID) + str(Topic) + '?auth='
 #---------------------------------------------------
 @app.route("/")
 #@app.route("/callback")
-#def hello():
-    #return "Hello World!"
+def hello():
+    return "Hello World!"
     
 #----------------------------------------------------
 @handler.add(MessageEvent, message=TextMessage)
