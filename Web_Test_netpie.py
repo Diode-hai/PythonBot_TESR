@@ -31,15 +31,31 @@ url = 'https://api.netpie.io/topic/' + str(APPID) + str(Topic)
 urlRESTAPI = 'https://api.netpie.io/topic/' + str(APPID) + str(Topic) + '?auth=' + str(KEY) + ':' + str(SECRET)
 #https://api.netpie.io/topic/LineBotRpi/LED_Control?auth=Jk0ej35pLC7TVr1:edWzwTUkzizhlyRamWWq6nF9I
 
- 
-@app.route("/")
-#@app.route("/callback")
+@app.route("/callback", methods=['POST'])
+def callback():
+    # get X-Line-Signature header value
+    signature = request.headers['X-Line-Signature']
 
-def hello():
-    return "Hello World!"
+    # get request body as text
+    body = request.get_data(as_text=True)
+    app.logger.info("Request body: " + body)
+
+    # handle webhook body
+    try:
+        handler.handle(body, signature)
+    except InvalidSignatureError:
+        abort(400)
+
+    return 'OK'
+
+#---------------------------------------------------
+#@app.route("/")
+#@app.route("/callback")
+#def hello():
+    #return "Hello World!"
  
-if __name__ == "__main__":
-    app.run()
+#if __name__ == "__main__":
+    #app.run()
 
 #-------------------------------------------------
 
