@@ -1,4 +1,8 @@
-from flask import Flask
+from flask import Flask, request, abort
+
+import requests # pip install requests
+import urllib3
+
 app = Flask(__name__)
  
 @app.route("/")
