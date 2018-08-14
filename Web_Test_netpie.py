@@ -39,7 +39,7 @@ def hello():
     return "Hello World!"
     
 #----------------------------------------------------
-@app.route("/callback", methods=['POST'])
+@app.route("/callback", methods=['GET', 'POST'])
 def callback():
     signature = request.headers['X-Line-Signature']
 
