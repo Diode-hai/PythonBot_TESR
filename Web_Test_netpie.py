@@ -33,10 +33,10 @@ urlRESTAPI = 'https://api.netpie.io/topic/' + str(APPID) + str(Topic) + '?auth='
 
 
 #---------------------------------------------------
-@app.route("/")
+#@app.route("/")
 #@app.route("/callback")
-def hello():
-    return "Hello World!"
+#def hello():
+    #return "Hello World!"
     
 #----------------------------------------------------
 #@app.route("/callback", methods= ['GET','POST','DELETE'])
