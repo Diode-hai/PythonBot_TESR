@@ -70,8 +70,8 @@ def handle_message(event):
     	r = requests.put(url, data = {'':'OFF'} , auth=(str(KEY),str(SECRET)))
 	
 	message = ImageSendMessage(
-    		original_content_url='https://example.com/original.jpg',
-    		preview_image_url='https://example.com/preview.jpg'
+    		original_content_url='https://www.img.in.th/images/04a428c1264fde336fb867412d648f40.jpg',
+    		preview_image_url='https://www.img.in.th/images/04a428c1264fde336fb867412d648f40.jpg'
 	)
 	line_bot_api.reply_message(event.reply_token, message)
 
