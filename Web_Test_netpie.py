@@ -64,16 +64,22 @@ def handle_message(event):
     	r = requests.put(url, data = {'':'ON'} , auth=(str(KEY),str(SECRET)))
 		
     elif "off" in str(event.message.text):
-    	#line_bot_api.reply_message(event.reply_token,TextSendMessage(text='OFF LED'))
-
+    	line_bot_api.reply_message(event.reply_token,TextSendMessage(text='OFF LED1'))
+	
     	#REST API NETPIE OFF LED
     	r = requests.put(url, data = {'':'OFF'} , auth=(str(KEY),str(SECRET)))
 	
+    elif "menu" in str(event.message.text):
+    	#line_bot_api.reply_message(event.reply_token,TextSendMessage(text='OFF LED'))
 	message = ImageSendMessage(
     		original_content_url='https://www.img.in.th/images/04a428c1264fde336fb867412d648f40.jpg',
     		preview_image_url='https://www.img.in.th/images/04a428c1264fde336fb867412d648f40.jpg'
 	)
 	line_bot_api.reply_message(event.reply_token, message)
+	
+    	#REST API NETPIE OFF LED
+    	r = requests.put(url, data = {'':'MENU'} , auth=(str(KEY),str(SECRET)))
+	
 
     elif "temp?" in str(event.message.text):
     	#REST API NETPIE read sensor value
